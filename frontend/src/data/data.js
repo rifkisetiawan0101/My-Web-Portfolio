@@ -27,7 +27,7 @@ export const skills = [
     { name: 'JavaScript', logo: '/Image/Skills/js.png' },
     { name: 'Bootstrap', logo: '/Image/Skills/bootstrap.png' },
     { name: 'Tailwind', logo: '/Image/Skills/tailwind.png' },
-    { name: 'MongoDB', logo: '/Image/Skills/mongodb.png' },
+    { name: 'MongoDB', logo: '/Image/Skills/mongoDB.png' },
     { name: 'Express.js', logo: '/Image/Skills/express.png' },
     { name: 'React.js', logo: '/Image/Skills/react.png' },
     { name: 'Node.js', logo: '/Image/Skills/node.png' },
