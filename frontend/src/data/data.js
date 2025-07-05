@@ -4,7 +4,7 @@ import { Gamepad2, Code, BrainCircuit, Award, Star } from 'lucide-react';
 export const personalInfo = {
     name: "Rifki Setiawan",
     roles: ["Game Developer", "Fullstack Developer"],
-    bio: "As a Multimedia Student focusing on game programming, I combine technical expertise and creativity to create mesmerizing experiences. Currently, I am a D4 Digital Multimedia Engineering student at Politeknik Negeri Jakarta, with a strong commitment in bringing innovative solutions through gaming technology.",
+    bio: "Digital Multimedia Engineering student with specialization in game development (Unity/C#) and fullstack website development. Experienced in project development cycle from ideation to deployment, proven by the success of being a Top 10 Finalist in TSA Gamefest 2024 competition. Skilled in implementing gameplay mechanics, designing backend architecture, and collaborating within technical teams to efficiently achieve project goals.",
     email: "rifki.setiawan0101@gmail.com",
     cvLink: "https://github.com/rifkisetiawan0101/rifkisetiawan0101/blob/main/_CV-Rifki-Setiawan.pdf",
     socials: {
