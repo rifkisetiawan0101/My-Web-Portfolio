@@ -6,7 +6,7 @@ export const personalInfo = {
     roles: ["Game Developer", "Fullstack Developer"],
     bio: "Digital Multimedia Engineering student who specializes in game development (Unity/C#) and fullstack website development. Experienced in the project development cycle from idea to deployment, proven by the success of being a Top 10 Finalist in the TSA Gamefest 2024 competition. Skilled in implementing gameplay mechanics, designing backend architecture, and collaborating within technical teams to efficiently achieve project goals.",
     email: "rifki.setiawan0101@gmail.com",
-    cvLink: "https://github.com/rifkisetiawan0101/rifkisetiawan0101/blob/main/_CV-Rifki-Setiawan.pdf",
+    cvLink: "https://drive.google.com/drive/folders/1nfHXCFGkdqJYGJe5yiUhc_whtMdLuIsx?usp=sharing",
     socials: {
         linkedin: "https://linkedin.com/in/rifki-setiawan0101",
         github: "https://github.com/rifkisetiawan0101",
