@@ -19,7 +19,7 @@ const Home = () => {
                     <div className="flex justify-center">
                         <div className="relative w-64 h-64 md:w-80 md:h-80">
                             <div className="absolute inset-0 bg-indigo-600 rounded-full blur-2xl opacity-50"></div>
-                            <img src={personalInfo.profilePicture} alt="Rifki Setiawan" className="relative w-full h-full object-cover rounded-full border-4 border-slate-700" />
+                            <img src={personalInfo.profilePicture} alt="Rifki Setiawan" className="relative w-full h-ful mt-8 md:mt-0 object-cover rounded-full border-4 border-slate-700" />
                         </div>
                     </div>
                     <div className="text-center md:text-left">

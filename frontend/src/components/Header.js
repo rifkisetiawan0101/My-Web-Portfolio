@@ -3,7 +3,7 @@ import { personalInfo } from '../data/data';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const navLinks = ["Home", "Skills", "Projects", "Education", "Contact"];
+    const navLinks = ["Home", "Skills", "Projects", "Education", "Achievements", "Contact"];
 
     return (
         <header className="bg-slate-900/50 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
@@ -33,17 +33,21 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            {isOpen && (
-                <div className="md:hidden" id="mobile-menu">
-                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        {navLinks.map((item) => (
-                            <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setIsOpen(false)} className="text-slate-300 hover:bg-slate-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                                {item}
-                            </a>
-                        ))}
-                    </div>
+            <div 
+                className={`
+                    md:hidden overflow-hidden transition-all duration-500 ease-in-out
+                    ${isOpen ? 'max-h-96' : 'max-h-0'}
+                `}
+                id="mobile-menu"
+            >
+                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    {navLinks.map((item) => (
+                        <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setIsOpen(false)} className="text-slate-300 hover:bg-slate-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                            {item}
+                        </a>
+                    ))}
                 </div>
-            )}
+            </div>
         </header>
     );
 };

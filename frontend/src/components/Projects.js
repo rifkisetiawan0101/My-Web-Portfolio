@@ -91,17 +91,18 @@ const Projects = () => {
         );
     };
 
-    const ProjectCardGrid = ({ project }) => {
+    const ProjectCardGrid = ({ project, index }) => { // Menerima 'index' untuk delay
         const [isHovering, setIsHovering] = useState(false);
 
         return (
             <div 
-                className="bg-slate-800 rounded-lg overflow-hidden group transition-transform duration-300 transform hover:scale-105"
+                className="bg-slate-800 rounded-lg overflow-hidden group transition-all duration-500"
+                style={{ transitionDelay: `${index * 100}ms` }}
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
             >
                 <div className="w-full aspect-video">
-                     <ProjectMedia 
+                    <ProjectMedia 
                         image={project.image} 
                         videoUrl={project.link} 
                         isHovering={isHovering}
@@ -142,7 +143,7 @@ const Projects = () => {
                             transform hover:scale-110
                             ${showOther 
                                 ? 'animate-[bounce-subtle_2s_ease-in-out_infinite]' 
-                                : 'animate-[breathing-bezier_3s_infinite]' /* Menggunakan animasi baru */
+                                : 'animate-[breathing-bezier_3s_infinite]'
                             }
                         `}
                     >
@@ -150,11 +151,17 @@ const Projects = () => {
                         {showOther ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
                     </button>
                 </div>
-                {showOther && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {projects.other.map((p, i) => <ProjectCardGrid key={i} project={p} />)}
-                    </div>
-                )}
+
+                <div className={`
+                    grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 
+                    transition-all duration-700 ease-in-out
+                    ${showOther ? 'opacity-100 max-h-[1000px] mt-8' : 'opacity-0 max-h-0 overflow-hidden'}
+                `}>
+                    {projects.other.map((p, i) => (
+                        <ProjectCardGrid key={i} project={p} index={i} /> // Mengirim 'index'
+                    ))}
+                </div>
+
             </div>
         </Section>
     );

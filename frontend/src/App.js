@@ -14,8 +14,8 @@ function App() {
     return (
         <div className="text-slate-300">
             <ParticleBackground />
-            <Header />
             <MouseTrail />
+            <Header />
             <div className="relative z-10">
                 <Header />
                 <main>

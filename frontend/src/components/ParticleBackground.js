@@ -17,10 +17,10 @@ const ParticleBackground = () => {
         () => ({
             background: {
                 color: {
-                    value: '#111827', // slate-900
+                    value: '#0f172a', // Warna slate-900 yang lebih gelap
                 },
             },
-            fpsLimit: 60,
+            fpsLimit: 30,
             interactivity: {
                 events: {
                     onHover: {
@@ -31,7 +31,7 @@ const ParticleBackground = () => {
                 },
                 modes: {
                     grab: {
-                        distance: 200,
+                        distance: 180,
                         links: {
                             opacity: 0.5,
                         },
@@ -40,13 +40,13 @@ const ParticleBackground = () => {
             },
             particles: {
                 color: {
-                    value: '#818cf8', // indigo-400
+                    value: ['#6366f1', '#F26467'],
                 },
                 links: {
-                    color: '#6366f1', // indigo-500
+                    color: '#6366f1',
                     distance: 150,
                     enable: true,
-                    opacity: 0.2,
+                    opacity: 0.5,
                     width: 1,
                 },
                 collisions: {
@@ -59,7 +59,7 @@ const ParticleBackground = () => {
                         default: 'bounce',
                     },
                     random: true,
-                    speed: 1,
+                    speed: 2,
                     straight: false,
                 },
                 number: {
@@ -67,17 +67,36 @@ const ParticleBackground = () => {
                         enable: true,
                         area: 800,
                     },
-                    value: 60,
+                    value: 80, // Jumlah partikel
                 },
                 opacity: {
-                    value: 0.3,
+                    value: 0.5,
                 },
                 shape: {
-                    type: 'circle',
+                    type: 'triangle',
                 },
                 size: {
-                    value: { min: 1, max: 3 },
+                    value: { min: 1, max: 4 },
+                    animation: {
+                        enable: true,
+                        speed: 10,
+                        sync: false,
+                        startValue: "min",
+                        destroy: "none",
+                    }
                 },
+                shadow: {
+                    enable: true,
+                    color: "#6366f1", // Warna glow
+                    blur: 10,
+                },
+                twinkle: {
+                    particles: {
+                        enable: true,
+                        frequency: 0.05,
+                        opacity: 1
+                    }
+                }
             },
             detectRetina: true,
         }),
@@ -95,7 +114,7 @@ const ParticleBackground = () => {
                     height: '100%',
                     top: 0,
                     left: 0,
-                    zIndex: -1,
+                    zIndex: 0,
                 }}
             />
         );
