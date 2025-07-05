@@ -6,7 +6,7 @@ export const personalInfo = {
     roles: ["Game Developer", "Fullstack Developer"],
     bio: "As a Multimedia Student focusing on game programming, I combine technical expertise and creativity to create mesmerizing experiences. Currently, I am a D4 Digital Multimedia Engineering student at Politeknik Negeri Jakarta, with a strong commitment in bringing innovative solutions through gaming technology.",
     email: "rifki.setiawan0101@gmail.com",
-    cvLink: "https://drive.google.com/file/d/12R-52-bf5cJ9rtc_VAYjfATiXCCeIFIs/view?usp=sharing",
+    cvLink: "https://github.com/rifkisetiawan0101/rifkisetiawan0101/blob/main/_CV-Rifki-Setiawan.pdf",
     socials: {
         linkedin: "https://linkedin.com/in/rifki-setiawan0101",
         github: "https://github.com/rifkisetiawan0101",
@@ -73,13 +73,14 @@ export const projects = {
             tags: ["Casual", "Single Player", "Tycoon", "Unity", "C#"],
             overview: "A a business simulation game inspired by the local vibe of Indonesia’s urban ghost market. Enjoy a fun and unique experience as you become a market tycoon, protect your market from threats, and gather materials to make your market the most popular among ghosts!.",
             contributions: [
-                "Created and designed merchant mechanics system, such as placement, collect coin, upgrade and restock.",
-                "Built in game tutorials to guide players throughout the gameplay.",
-                "Worked together to create NPC logic, creating a lively market atmosphere.",
-                "Created invoice system to present daily reports.",
+                "Created and designed persistent data manager with singleton pattern",
+                "Implemented merchant mechanics system, such as free-form placement, collect coin, upgrade and restock.",
+                "Built in game tutorials with chaining coroutine to guide players throughout the gameplay.",
+                "Worked together to create simple AI NPC logic, creating a lively market atmosphere.",
                 "Implemented a collectible item and inventory system that allows players to gather materials for merchant upgrades.",
                 "Developed an item purchase system enabling players to restock merchant supplies.",
                 "Created some in-game minigames to enhance gameplay experience.",
+                "And so many more..."
             ],
             links: { 
                 itch: "https://ladahitamcreation.itch.io/fondness-in-reveries", 
