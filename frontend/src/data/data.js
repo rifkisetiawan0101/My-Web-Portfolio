@@ -6,7 +6,7 @@ export const personalInfo = {
     roles: ["Game Developer", "Fullstack Developer"],
     bio: "As a Multimedia Student focusing on game programming, I combine technical expertise and creativity to create mesmerizing experiences. Currently, I am a D4 Digital Multimedia Engineering student at Politeknik Negeri Jakarta, with a strong commitment in bringing innovative solutions through gaming technology.",
     email: "rifki.setiawan0101@gmail.com",
-    cvLink: "#", // Replace with your CV link
+    cvLink: "https://drive.google.com/file/d/12R-52-bf5cJ9rtc_VAYjfATiXCCeIFIs/view?usp=sharing",
     socials: {
         linkedin: "https://linkedin.com/in/rifki-setiawan0101",
         github: "https://github.com/rifkisetiawan0101",
