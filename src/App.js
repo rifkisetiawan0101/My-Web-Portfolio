@@ -7,20 +7,27 @@ import Educations from './components/Educations';
 import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ParticleBackground from './components/ParticleBackground';
+import MouseTrail from './components/MouseTrail';
 
 function App() {
     return (
-        <div className="bg-slate-900 text-slate-300">
+        <div className="text-slate-300">
+            <ParticleBackground />
             <Header />
-            <main>
-                <Home />
-                <Skills />
-                <Projects />
-                <Educations />
-                <Achievements />
-                <Contact />
-            </main>
-            <Footer />
+            <MouseTrail />
+            <div className="relative z-10">
+                <Header />
+                <main>
+                    <Home />
+                    <Skills />
+                    <Projects />
+                    <Educations />
+                    <Achievements />
+                    <Contact />
+                </main>
+                <Footer />
+            </div>
         </div>
     );
 }

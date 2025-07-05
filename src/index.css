@@ -46,27 +46,30 @@
         60% { transform: translateY(-4px); }
         80% { transform: translateY(4px); }
     }
+
+    @keyframes fade-out-trail {
+        from {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        to {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0);
+        }
+    }
 }
 
-.mouse-cursor-dot, .mouse-trail-dot {
+.mouse-trail-dot {
     position: fixed;
     top: 0;
     left: 0;
     border-radius: 50%;
-    pointer-events: none; /* Agar tidak mengganggu klik */
-    transform: translate(-50%, -50%);
+    pointer-events: none;
     z-index: 9999;
-}
-
-.mouse-cursor-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #a78bfa; /* violet-400 */
-}
-
-.mouse-trail-dot {
-    width: 30px;
-    height: 30px;
+    
+    width: 20px;
+    height: 20px;
     background: radial-gradient(circle, rgba(99, 102, 241, 0.5) 0%, rgba(99, 102, 241, 0) 70%); /* indigo-500 glow */
-    transition: all 0.1s ease-out;
+    
+    animation: fade-out-trail 0.5s forwards;
 }
