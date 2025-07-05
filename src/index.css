@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Animasi untuk tombol 'View CV' */
+    @keyframes bounce-medium {
+        0%, 100% {
+            transform: translateY(-25%);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+        50% {
+            transform: none;
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
+    }
+
+    @keyframes bounce-subtle {
+        0%, 100% {
+                transform: translateY(-10%);
+                animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            }
+            50% {
+                transform: none;
+                animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+
+        /* Animasi untuk tombol 'Show' */
+        @keyframes breathing-bezier {
+            0%, 100% {
+                transform: scale(1);
+                animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+            }
+            50% {
+                transform: scale(1.1);
+                animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+            }
+        }
+
+    /* Animasi untuk panah 'View My Works' */
+    @keyframes shake-vertical {
+        0%, 100% { transform: translateY(0); }
+        20% { transform: translateY(-6px); }
+        40% { transform: translateY(6px); }
+        60% { transform: translateY(-4px); }
+        80% { transform: translateY(4px); }
+    }
+}
+
+.mouse-cursor-dot, .mouse-trail-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none; /* Agar tidak mengganggu klik */
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.mouse-cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #a78bfa; /* violet-400 */
+}
+
+.mouse-trail-dot {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.5) 0%, rgba(99, 102, 241, 0) 70%); /* indigo-500 glow */
+    transition: all 0.1s ease-out;
+}
