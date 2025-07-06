@@ -53,27 +53,27 @@ This project leverages a modern, robust, and scalable technology stack.
 
 **Home Section**
 
-![Home](home.png)
+![Home](screenshots/home.png)
 
 **Skills Section**
 
-![Skills](skills.png)
+![Skills](screenshots/skills.png)
 
 **Projects Section**
 
-![Projects](projects.png)
+![Projects](screenshots/projects.png)
 
 **Education Section**
 
-![Education](education.png)
+![Education](screenshots/education.png)
 
 **Achievements Section**
 
-![Achievements](achievements.png)
+![Achievements](screenshots/achievements.png)
 
 **Contact Section**
 
-![Contact](contact.png)
+![Contact](screenshots/contact.png)
 
 ## 📄 License
 
