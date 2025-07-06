@@ -75,6 +75,10 @@ This project leverages a modern, robust, and scalable technology stack.
 
 ![Contact](contact.png)
 
+## 📄 License
+
+This project is licensed under the Apache 2.0 License. See [LICENSE](LICENSE) for details.
+
 ## 🙏 Credits
 
 **Rifki Setiawan** 👨‍💻 Full Stack Developer & Game Programmer ([GitHub](https://github.com/rifkisetiawan0101))
