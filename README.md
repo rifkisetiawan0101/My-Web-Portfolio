@@ -4,8 +4,7 @@
 
 ## ✨ Demo
 
-You can view the live portfolio here: [**portfolio-rifki.vercel.app**](https://your-vercel-deployment-url.vercel.app/) 
-*(Jangan lupa ganti dengan URL Vercel Anda yang sebenarnya)*
+You can view the live portfolio here: [**Portfolio**](https://my-web-portfolio-rifkisetiawan0101s-projects.vercel.app/) 
 
 ## 📖 Overview
 
@@ -89,20 +88,32 @@ To run this project on your local machine, follow these steps:
 
 ## 📸 Screenshots
 
-*(Tambahkan screenshot portofolio Anda di sini. Anda bisa drag-and-drop gambar ke dalam editor teks GitHub)*
-
 **Home Section**
-`[Your Screenshot Here]`
+![Home](home.png)
+
+**Skills Section**
+![Skills](skills.png)
 
 **Projects Section**
-`[Your Screenshot Here]`
+![Projects](projects.png)
 
-**Contact Form**
-`[Your Screenshot Here]`
+**Education Section**
+![Education](education.png)
+
+**Achievements Section**
+![Achievements](achievements.png)
+
+**Contact Section**
+![Contact](contact.png)
+
+## 📄 License
+
+This project is licensed under the Apache 2.0 License. See [LICENSE](LICENSE) for details.
 
 ## 🙏 Credits
 
 **Rifki Setiawan** 👨‍💻 Full Stack Developer & Game Programmer ([GitHub](https://github.com/rifkisetiawan0101))
 
 ---
+
 Thanks for visiting my project repository! ✨
