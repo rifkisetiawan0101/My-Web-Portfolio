@@ -127,14 +127,14 @@ export const projects = {
             "tags": ["2025", "Course Project", "Team Lead", "Full-Stack", "HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
             "overview": "A comprehensive web platform for the Depok City Fire Department, designed to serve as a public information hub and an interactive emergency reporting system. The project features a dynamic front-end for citizens and a complete back-end admin dashboard for content and report management.",
             "contributions": [
-                "Led the project as Team Lead, overseeing the entire development lifecycle from planning and database design to final implementation and debugging.",
-                "Architected and developed the full-stack application using a classic LAMP stack (PHP & MySQL) with a modern, asynchronous front-end.",
-                "Engineered the back-end API endpoints using PHP to handle all CRUD (Create, Read, Update, Delete) operations for events, educational content, locations, and user management.",
-                "Designed and implemented the MySQL database schema, ensuring normalized and efficient data structures for all application entities.",
-                "Developed the core front-end interactivity with vanilla JavaScript, including AJAX calls using the Fetch API for a seamless, single-page-app-like user experience.",
-                "Implemented a sophisticated, interactive reporting map using Leaflet.js, integrated with the Nominatim API for reverse geocoding functionality.",
-                "Built a secure admin authentication system with session management and password hashing (PASSWORD_DEFAULT) to protect the admin dashboard.",
-                "Created a dynamic, data-driven admin dashboard with DataTables.js for interactive data sorting, searching, and pagination, significantly improving content manageability."
+                "Led the project as Team Lead, managing the full development lifecycle from planning and database design to deployment.",
+                "Developed a full-stack application using a PHP/MySQL back-end and a modern, asynchronous JavaScript front-end.",
+                "Engineered RESTful API endpoints in PHP to handle all CRUD operations for site entities like events, reports, and users.",
+                "Designed and implemented a normalized MySQL database schema to ensure data integrity and optimal performance.",
+                "Built a dynamic front-end with vanilla JavaScript and the Fetch API for a responsive, single-page-app-like user experience.",
+                "Integrated an interactive reporting map using Leaflet.js with the Nominatim API for live reverse geocoding.",
+                "Implemented a secure admin authentication system using PHP sessions and `password_hash()` with the PASSWORD_DEFAULT algorithm.",
+                "Created an interactive admin dashboard with DataTables.js, enabling efficient data filtering, sorting, and pagination."
             ],
             "links": { "github": "https://github.com/rifkisetiawan0101/Website-Damkar-Depok" },
             "image": "/Image/Projects/Website-Damkar-Depok.png"
