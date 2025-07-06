@@ -123,15 +123,22 @@ export const projects = {
             "image": "/Image/Projects/Dompet-Sehat-Game.png"
         },
         {
-            "title": "Website Damkar Depok",
-            "tags": ["2025", "Course", "Team Lead", "HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
-            "overview": "Documentation under process...",
+            "title": "Depok City Fire & Rescue Website",
+            "tags": ["2025", "Course Project", "Team Lead", "Full-Stack", "HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
+            "overview": "A comprehensive web platform for the Depok City Fire Department, designed to serve as a public information hub and an interactive emergency reporting system. The project features a dynamic front-end for citizens and a complete back-end admin dashboard for content and report management.",
             "contributions": [
-                // "Deployed the application across a multi-platform cloud environment (MongoDB Atlas, Railway, and Vercel)."
+                "Led the project as Team Lead, overseeing the entire development lifecycle from planning and database design to final implementation and debugging.",
+                "Architected and developed the full-stack application using a classic LAMP stack (PHP & MySQL) with a modern, asynchronous front-end.",
+                "Engineered the back-end API endpoints using PHP to handle all CRUD (Create, Read, Update, Delete) operations for events, educational content, locations, and user management.",
+                "Designed and implemented the MySQL database schema, ensuring normalized and efficient data structures for all application entities.",
+                "Developed the core front-end interactivity with vanilla JavaScript, including AJAX calls using the Fetch API for a seamless, single-page-app-like user experience.",
+                "Implemented a sophisticated, interactive reporting map using Leaflet.js, integrated with the Nominatim API for reverse geocoding functionality.",
+                "Built a secure admin authentication system with session management and password hashing (PASSWORD_DEFAULT) to protect the admin dashboard.",
+                "Created a dynamic, data-driven admin dashboard with DataTables.js for interactive data sorting, searching, and pagination, significantly improving content manageability."
             ],
             "links": { "github": "https://github.com/rifkisetiawan0101/Website-Damkar-Depok" },
             "image": "/Image/Projects/Website-Damkar-Depok.png"
-        },
+        }
     ],
     other: [
         { title: "#JagoNgobrol", image: "/Image/Projects/JagoNgobrol.png", tags: ["2025", "Course", "Team Lead", "Adobe Animate", "ActionScript 3.0"], link: "https://youtu.be/rHxLwGc80PQ?si=_5AxP2a7mBF6eNFi" },
