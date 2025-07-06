@@ -52,21 +52,27 @@ This project leverages a modern, robust, and scalable technology stack.
 ## 📸 Screenshots
 
 **Home Section**
+
 ![Home](home.png)
 
 **Skills Section**
+
 ![Skills](skills.png)
 
 **Projects Section**
+
 ![Projects](projects.png)
 
 **Education Section**
+
 ![Education](education.png)
 
 **Achievements Section**
+
 ![Achievements](achievements.png)
 
 **Contact Section**
+
 ![Contact](contact.png)
 
 ## 🙏 Credits
