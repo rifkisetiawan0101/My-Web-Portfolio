@@ -49,43 +49,6 @@ This project leverages a modern, robust, and scalable technology stack.
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Resend](https://img.shields.io/badge/Resend-000000?style=for-the-badge&logo=resend&logoColor=white)
 
-## 🛠️ How to Run Locally
-
-To run this project on your local machine, follow these steps:
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/rifkisetiawan0101/your-repo-name.git](https://github.com/rifkisetiawan0101/your-repo-name.git)
-    cd your-repo-name/frontend 
-    ```
-    *(Pastikan Anda berada di dalam folder `frontend`)*
-
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
-
-3.  **Set up Environment Variables:**
-    * Create a file named `.env.local` in the `frontend` directory.
-    * Add the following variables, replacing the placeholder values with your actual credentials:
-        ```
-        MONGO_URI=your_mongodb_connection_string
-        RESEND_API_KEY=your_resend_api_key
-        MY_EMAIL=your_personal_email@example.com
-        ```
-
-4.  **Run the development server:**
-    This project uses Vercel's development server to run the frontend and the serverless functions together.
-    ```bash
-    # Jika belum, install Vercel CLI
-    npm install -g vercel
-
-    # Jalankan server
-    vercel dev
-    ```
-
-5.  Open [http://localhost:3000](http://localhost:3000) in your browser.
-
 ## 📸 Screenshots
 
 **Home Section**
@@ -105,10 +68,6 @@ To run this project on your local machine, follow these steps:
 
 **Contact Section**
 ![Contact](contact.png)
-
-## 📄 License
-
-This project is licensed under the Apache 2.0 License. See [LICENSE](LICENSE) for details.
 
 ## 🙏 Credits
 
