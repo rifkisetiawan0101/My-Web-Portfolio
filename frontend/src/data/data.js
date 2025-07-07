@@ -37,7 +37,7 @@ export const skills = [
     { name: 'MySQL', logo: '/Image/Skills/mysql.png' },
     { name: 'Vercel', logo: '/Image/Skills/vercel.png' },
     { name: 'Railway', logo: '/Image/Skills/railway.png' },
-    { name: 'Python', logo: '/Image/Skills/phyton.png' },
+    { name: 'Python', logo: '/Image/Skills/python.png' },
     { name: 'C++', logo: '/Image/Skills/c++.png' },
     { name: 'Java', logo: '/Image/Skills/java.png' },
     { name: 'Processing', logo: '/Image/Skills/processing.png' },
