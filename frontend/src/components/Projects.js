@@ -96,7 +96,7 @@ const Projects = () => {
 
         return (
             <div 
-                className="bg-slate-800 rounded-lg overflow-hidden group transition-all duration-500"
+                className="bg-slate-800 rounded-lg overflow-hidden group transition-all duration-300 transform group-hover:scale-105"
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
