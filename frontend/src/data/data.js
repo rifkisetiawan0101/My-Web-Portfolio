@@ -99,7 +99,6 @@ export const projects = {
                 "Implemented cats spawning and boarding logic that allows cats to board and disembark at the opposite station to earn coins.",
             ],
             links: { 
-                itch: "https://ladahitamcreation.itch.io/fondness-in-reveries", 
                 trailer: "https://youtu.be/vSi4UqEW16I?si=AZCeI8UZvYmT6REg",
                 github: "https://github.com/rifkisetiawan0101/Cikini-Ke-Gondangdia",
             },
