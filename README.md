@@ -65,7 +65,6 @@ This project leverages a modern, robust, and scalable technology stack.
 
 **Education Section**
 
-![Education](screenshots/education.png)
 
 **Achievements Section**
 
