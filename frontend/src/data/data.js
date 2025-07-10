@@ -52,24 +52,28 @@ export const skills = [
 
 export const projects = {
     fullstack: [
-        // {
-        //     "title": "LadaHitam Creation Website",
-        //     "tags": ["Content Management System", "Next.js", "TypeScript", "PostgreSQL"],
-        //     "overview": "Dompet Sehat is an interactive, choice-based web game designed as a financial literacy simulation. 🧠 Players step into the shoes of a young Indonesian adult trying to manage their monthly salary for 28 days. The game tackles familiar local challenges like balancing needs vs. wants, dealing with sudden expenses, and navigating the temptations of a consumptive lifestyle. Can you make it to the next payday with your finances, happiness, and health intact? Your final balance determines your fate!.",
-        //     "contributions": [
-        //         "Architected and developed a full-stack MERN application from concept to deployment as a solo developer.",
-        //         "Built a RESTful API with Node.js and Express.js to serve dynamic, randomized game events.",
-        //         "Designed and implemented a MongoDB schema using Mongoose for game event data.",
-        //         "Created a responsive and interactive user interface with React, managing complex game state with React Hooks (useState, useCallback).",
-        //         "Engineered a dynamic audio system with unique sound effects for 10 different game endings.",
-        //         "Deployed the application across a multi-platform cloud environment (MongoDB Atlas, Railway, and Vercel)."
-        //     ],
-        //     "links": { "live": "https://dompet-sehat-game.vercel.app/", "github": "https://github.com/rifkisetiawan0101/Dompet-Sehat-Game" },
-        //     "image": "/Image/Projects/Dompet-Sehat-Game.png"
-        // },
+        {
+            "title": "LadaHitam Creation Website & CMS",
+            "tags": ["Next.js", "Full-Stack", "PostgreSQL", "Prisma", "Supabase", "TypeScript", "Tailwind CSS", "Vercel"],
+            "overview": "A dynamic website for the 'LadaHitam Creation' indie game studio, serving as both a public portfolio and an internal Content Management System (CMS). The public-facing site showcases the studio's projects, members, and achievements with interactive, gamified elements. The integrated admin page allows for full CRUD (Create, Read, Update, Delete) management of all site content.",
+            "contributions": [
+                "Architected a full-stack application using Next.js with the App Router, enabling a seamless blend of static pages, Server Components for data fetching, and interactive Client Components.",
+                "Designed and implemented a relational database schema with Prisma ORM, connecting to a PostgreSQL database hosted on Supabase.",
+                "Built a comprehensive set of RESTful API endpoints to handle all data management for projects, members, and achievements.",
+                "Developed a complete, secure admin panel from scratch, featuring dynamic forms for creating and editing all website content.",
+                "Engineered a file upload system using Supabase Storage, complete with Row-Level Security (RLS) policies for secure uploads.",
+                "Implemented a modern, responsive frontend with Tailwind CSS, featuring custom typography configurations and gamified elements.",
+                "Managed the entire deployment lifecycle, configuring environment variables and build settings for a successful launch on Vercel."
+            ],
+            "links": { 
+                "live": "https://ladahitamcreation.vercel.app/", 
+                "github": "https://github.com/rifkisetiawan0101/ladahitamcreation" 
+            },
+            "image": "/Image/Projects/LadaHitamCreation-Website.png"
+        },
         {
             "title": "Dompet Sehat Game",
-            "tags": ["MERN Stack", "Gamification", "Finance", "MongoDB", "Express.js", "React.js", "Node.js"],
+            "tags": ["MERN Stack", "Gamification", "Finance", "MongoDB", "Express.js", "React.js", "Node.js", "Vercel", "Railway"],
             "overview": "Dompet Sehat is an interactive, choice-based web game designed as a financial literacy simulation. Players step into the shoes of a young Indonesian adult trying to manage their monthly salary for 28 days. The game tackles familiar local challenges like balancing needs vs. wants, dealing with sudden expenses, and navigating the temptations of a consumptive lifestyle. Can you make it to the next payday with your finances, happiness, and health intact? Your final balance determines your fate!.",
             "contributions": [
                 "Architected and developed a full-stack MERN application from concept to deployment as a solo developer.",
