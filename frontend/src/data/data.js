@@ -70,7 +70,7 @@ export const projects = {
         {
             "title": "Dompet Sehat Game",
             "tags": ["MERN Stack", "Gamification", "Finance", "MongoDB", "Express.js", "React.js", "Node.js"],
-            "overview": "Dompet Sehat is an interactive, choice-based web game designed as a financial literacy simulation. 🧠 Players step into the shoes of a young Indonesian adult trying to manage their monthly salary for 28 days. The game tackles familiar local challenges like balancing needs vs. wants, dealing with sudden expenses, and navigating the temptations of a consumptive lifestyle. Can you make it to the next payday with your finances, happiness, and health intact? Your final balance determines your fate!.",
+            "overview": "Dompet Sehat is an interactive, choice-based web game designed as a financial literacy simulation. Players step into the shoes of a young Indonesian adult trying to manage their monthly salary for 28 days. The game tackles familiar local challenges like balancing needs vs. wants, dealing with sudden expenses, and navigating the temptations of a consumptive lifestyle. Can you make it to the next payday with your finances, happiness, and health intact? Your final balance determines your fate!.",
             "contributions": [
                 "Architected and developed a full-stack MERN application from concept to deployment as a solo developer.",
                 "Built a RESTful API with Node.js and Express.js to serve dynamic, randomized game events.",
@@ -110,7 +110,7 @@ export const projects = {
                 "Created and managed the dialogue system for character interactions.",
                 "Developed asynchronous scene transition system, ensuring smooth scene switching.",
                 "Built a robust save system to store player progress using JSON.",
-                "Developed core movement system including branching movement animation.",
+                "Developed core movement system including branching movement and dialogue animation.",
                 "Implemented comprehensive mechanics with programmer team.",
             ],
             links: { 
@@ -127,9 +127,9 @@ export const projects = {
                 "Created and designed persistent data manager with singleton pattern",
                 "Implemented merchant mechanics system, such as free-form placement, collect coin, upgrade and restock.",
                 "Built in game tutorials with chaining coroutine to guide players throughout the gameplay.",
-                "Worked together to create simple AI NPC logic, creating a lively market atmosphere.",
+                "Worked together to create simple AI NPC logic.",
                 "Implemented a collectible item and inventory system that allows players to gather materials for merchant upgrades.",
-                "Developed an item purchase system enabling players to restock merchant supplies.",
+                "Developed an item purchase system enabling players to restock supplies.",
                 "Created some in-game minigames to enhance gameplay experience.",
                 "And so many more..."
             ],
@@ -143,7 +143,7 @@ export const projects = {
         {
             title: "Cikini ke Gondangdia",
             tags: ["Casual", "Parallax", "Processing", "Java"],
-            overview: "🎮✨ “Cikini ke Gondangdia” is a casual game that combines train driving simulation with parallax scrolling visuals. Players are tasked with delivering passengers in the form of cats 🐱 from Cikini Station to Gondangdia Station. With a cheerful feel and dynamic visual effects, this game presents a colorful and fun train driving experience. Each trip awards points that can be used to increase train and station capacity, creating a simple management challenge. 🎮✨",
+            overview: "“Cikini ke Gondangdia” is a casual game that combines train driving simulation with parallax scrolling visuals. Players are tasked with delivering passengers in the form of cats from Cikini Station to Gondangdia Station. With a cheerful feel and dynamic visual effects, this game presents a colorful and fun train driving experience. Each trip awards points that can be used to increase train and station capacity, creating a simple management challenge.",
             contributions: [
                 "Sole Programmer: Designed and developed the entire game system using Java Processing.",
                 "Designed and integrated parallax scrolling backgrounds to enhance visual depth and atmosphere.",
