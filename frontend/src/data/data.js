@@ -54,7 +54,7 @@ export const projects = {
     fullstack: [
         {
             "title": "LadaHitam Creation Website & CMS",
-            "tags": ["Next.js", "Full-Stack", "PostgreSQL", "Prisma", "Supabase", "TypeScript", "Tailwind CSS", "Vercel"],
+            "tags": ["Next.js", "Full-Stack", "PostgreSQL", "Prisma", "Supabase", "TypeScript", "Tailwind CSS"],
             "overview": "A dynamic website for the 'LadaHitam Creation' indie game studio, serving as both a public portfolio and an internal Content Management System (CMS). The public-facing site showcases the studio's projects, members, and achievements with interactive, gamified elements. The integrated admin page allows for full CRUD (Create, Read, Update, Delete) management of all site content.",
             "contributions": [
                 "Architected a full-stack application using Next.js with the App Router, enabling a seamless blend of static pages, Server Components for data fetching, and interactive Client Components.",
@@ -73,7 +73,7 @@ export const projects = {
         },
         {
             "title": "Dompet Sehat Game",
-            "tags": ["MERN Stack", "Gamification", "Finance", "MongoDB", "Express.js", "React.js", "Node.js", "Vercel", "Railway"],
+            "tags": ["MERN Stack", "Gamification", "Finance", "MongoDB", "Express.js", "React.js", "Node.js"],
             "overview": "Dompet Sehat is an interactive, choice-based web game designed as a financial literacy simulation. Players step into the shoes of a young Indonesian adult trying to manage their monthly salary for 28 days. The game tackles familiar local challenges like balancing needs vs. wants, dealing with sudden expenses, and navigating the temptations of a consumptive lifestyle. Can you make it to the next payday with your finances, happiness, and health intact? Your final balance determines your fate!.",
             "contributions": [
                 "Architected and developed a full-stack MERN application from concept to deployment as a solo developer.",
