@@ -51,6 +51,55 @@ export const skills = [
 ];
 
 export const projects = {
+    fullstack: [
+        // {
+        //     "title": "LadaHitam Creation Website",
+        //     "tags": ["Content Management System", "Next.js", "TypeScript", "PostgreSQL"],
+        //     "overview": "Dompet Sehat is an interactive, choice-based web game designed as a financial literacy simulation. 🧠 Players step into the shoes of a young Indonesian adult trying to manage their monthly salary for 28 days. The game tackles familiar local challenges like balancing needs vs. wants, dealing with sudden expenses, and navigating the temptations of a consumptive lifestyle. Can you make it to the next payday with your finances, happiness, and health intact? Your final balance determines your fate!.",
+        //     "contributions": [
+        //         "Architected and developed a full-stack MERN application from concept to deployment as a solo developer.",
+        //         "Built a RESTful API with Node.js and Express.js to serve dynamic, randomized game events.",
+        //         "Designed and implemented a MongoDB schema using Mongoose for game event data.",
+        //         "Created a responsive and interactive user interface with React, managing complex game state with React Hooks (useState, useCallback).",
+        //         "Engineered a dynamic audio system with unique sound effects for 10 different game endings.",
+        //         "Deployed the application across a multi-platform cloud environment (MongoDB Atlas, Railway, and Vercel)."
+        //     ],
+        //     "links": { "live": "https://dompet-sehat-game.vercel.app/", "github": "https://github.com/rifkisetiawan0101/Dompet-Sehat-Game" },
+        //     "image": "/Image/Projects/Dompet-Sehat-Game.png"
+        // },
+        {
+            "title": "Dompet Sehat Game",
+            "tags": ["MERN Stack", "Gamification", "Finance", "MongoDB", "Express.js", "React.js", "Node.js"],
+            "overview": "Dompet Sehat is an interactive, choice-based web game designed as a financial literacy simulation. 🧠 Players step into the shoes of a young Indonesian adult trying to manage their monthly salary for 28 days. The game tackles familiar local challenges like balancing needs vs. wants, dealing with sudden expenses, and navigating the temptations of a consumptive lifestyle. Can you make it to the next payday with your finances, happiness, and health intact? Your final balance determines your fate!.",
+            "contributions": [
+                "Architected and developed a full-stack MERN application from concept to deployment as a solo developer.",
+                "Built a RESTful API with Node.js and Express.js to serve dynamic, randomized game events.",
+                "Designed and implemented a MongoDB schema using Mongoose for game event data.",
+                "Created a responsive and interactive user interface with React, managing complex game state with React Hooks (useState, useCallback).",
+                "Engineered a dynamic audio system with unique sound effects for 10 different game endings.",
+                "Deployed the application across a multi-platform cloud environment (MongoDB Atlas, Railway, and Vercel)."
+            ],
+            "links": { "live": "https://dompet-sehat-game.vercel.app/", "github": "https://github.com/rifkisetiawan0101/Dompet-Sehat-Game" },
+            "image": "/Image/Projects/Dompet-Sehat-Game.png"
+        },
+        {
+            "title": "Depok City Fire & Rescue Website",
+            "tags": ["2025", "Course Project", "Team Lead", "Full-Stack", "HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
+            "overview": "A comprehensive web platform for the Depok City Fire Department, designed to serve as a public information hub and an interactive emergency reporting system. The project features a dynamic front-end for citizens and a complete back-end admin dashboard for content and report management.",
+            "contributions": [
+                "Led the project as Team Lead, managing the full development lifecycle from planning and database design to deployment.",
+                "Developed a full-stack application using a PHP/MySQL back-end and a modern, asynchronous JavaScript front-end.",
+                "Engineered RESTful API endpoints in PHP to handle all CRUD operations for site entities like events, reports, and users.",
+                "Designed and implemented a normalized MySQL database schema to ensure data integrity and optimal performance.",
+                "Built a dynamic front-end with vanilla JavaScript and the Fetch API for a responsive, single-page-app-like user experience.",
+                "Integrated an interactive reporting map using Leaflet.js with the Nominatim API for live reverse geocoding.",
+                "Implemented a secure admin authentication system using PHP sessions and `password_hash()` with the PASSWORD_DEFAULT algorithm.",
+                "Created an interactive admin dashboard with DataTables.js, enabling efficient data filtering, sorting, and pagination."
+            ],
+            "links": { "github": "https://github.com/rifkisetiawan0101/Website-Damkar-Depok" },
+            "image": "/Image/Projects/Website-Damkar-Depok.png"
+        }
+    ],
     game: [
         {
             title: "Fondness in Riveries (Under Development)",
@@ -107,44 +156,10 @@ export const projects = {
             image: "/Image/Projects/Cikini-ke-Gondangdia.png"
         },
     ],
-    fullstack: [
-        {
-            "title": "Dompet Sehat Game",
-            "tags": ["MERN Stack", "Gamification", "Finance", "MongoDB", "Express.js", "React.js", "Node.js"],
-            "overview": "Dompet Sehat is an interactive, choice-based web game designed as a financial literacy simulation. 🧠 Players step into the shoes of a young Indonesian adult trying to manage their monthly salary for 28 days. The game tackles familiar local challenges like balancing needs vs. wants, dealing with sudden expenses, and navigating the temptations of a consumptive lifestyle. Can you make it to the next payday with your finances, happiness, and health intact? Your final balance determines your fate!.",
-            "contributions": [
-                "Architected and developed a full-stack MERN application from concept to deployment as a solo developer.",
-                "Built a RESTful API with Node.js and Express.js to serve dynamic, randomized game events.",
-                "Designed and implemented a MongoDB schema using Mongoose for game event data.",
-                "Created a responsive and interactive user interface with React, managing complex game state with React Hooks (useState, useCallback).",
-                "Engineered a dynamic audio system with unique sound effects for 10 different game endings.",
-                "Deployed the application across a multi-platform cloud environment (MongoDB Atlas, Railway, and Vercel)."
-            ],
-            "links": { "live": "https://dompet-sehat-game.vercel.app/", "github": "https://github.com/rifkisetiawan0101/Dompet-Sehat-Game" },
-            "image": "/Image/Projects/Dompet-Sehat-Game.png"
-        },
-        {
-            "title": "Depok City Fire & Rescue Website",
-            "tags": ["2025", "Course Project", "Team Lead", "Full-Stack", "HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
-            "overview": "A comprehensive web platform for the Depok City Fire Department, designed to serve as a public information hub and an interactive emergency reporting system. The project features a dynamic front-end for citizens and a complete back-end admin dashboard for content and report management.",
-            "contributions": [
-                "Led the project as Team Lead, managing the full development lifecycle from planning and database design to deployment.",
-                "Developed a full-stack application using a PHP/MySQL back-end and a modern, asynchronous JavaScript front-end.",
-                "Engineered RESTful API endpoints in PHP to handle all CRUD operations for site entities like events, reports, and users.",
-                "Designed and implemented a normalized MySQL database schema to ensure data integrity and optimal performance.",
-                "Built a dynamic front-end with vanilla JavaScript and the Fetch API for a responsive, single-page-app-like user experience.",
-                "Integrated an interactive reporting map using Leaflet.js with the Nominatim API for live reverse geocoding.",
-                "Implemented a secure admin authentication system using PHP sessions and `password_hash()` with the PASSWORD_DEFAULT algorithm.",
-                "Created an interactive admin dashboard with DataTables.js, enabling efficient data filtering, sorting, and pagination."
-            ],
-            "links": { "github": "https://github.com/rifkisetiawan0101/Website-Damkar-Depok" },
-            "image": "/Image/Projects/Website-Damkar-Depok.png"
-        }
-    ],
     other: [
+        { title: "Temporary Portfolio", image: "/Image/Projects/Temporary-Portfolio.png", tags: ["2024", "Course",  "Solo", "HTML", "CSS", "JavaScript", "Bootstrap"], link: "https://github.com/rifkisetiawan0101/Temporary-Portfolio" },
         { title: "#JagoNgobrol", image: "/Image/Projects/JagoNgobrol.png", tags: ["2025", "Course", "Team Lead", "Adobe Animate", "ActionScript 3.0"], link: "https://youtu.be/rHxLwGc80PQ?si=_5AxP2a7mBF6eNFi" },
         { title: "Manjad", image: "/Image/Projects/Manjad.png", tags: ["2024", "Course", "Team Member", "Platformer", "Rage Bait", "Construct 3"], link: "https://youtu.be/qTV3yais-3U?si=-Ee_HDULQCpfnCTx" },
-        { title: "Temporary Portfolio", image: "/Image/Projects/Temporary-Portfolio.png", tags: ["2024", "Course",  "Solo", "HTML", "CSS", "JavaScript", "Bootstrap"], link: "https://github.com/rifkisetiawan0101/Temporary-Portfolio" },
         { title: "The Misbrew", image: "/Image/Projects/The-Misbrew.jpg", tags: ["2025", "Course", "Team Lead", "Autodesk Maya", "3D Animation"], link: "https://youtu.be/KhWlnyI7htA?si=xkq3DHwHTSpZwFgT" },
         { title: "Dari Ucapan, Ke Hati, dan Menjadi Rasa", image: "/Image/Projects/documenter.jpg", tags: ["2025", "Course", "Team Member", "Documenter"], link: "https://youtu.be/odorBME8NAI?si=qT9qE4PB-DeRto5lT" },
     ]
@@ -178,7 +193,7 @@ export const achievements = [
     { 
         title: "Top 10 Team - TSA Game Fest 2024", 
         description: "Finalist in the national competitions (Gamejam), training and exhibitons (Showcase) held by Agate Academy & DTS TSA (Talent Scouting Academy) Kominfo.", 
-        logo: "/Image/Logos/agate-academy.png"
+        logo: "/Image/Logos/tsa-gamefest-2024.png"
     },
     { 
         title: "Certificate of Excellence - TSA Game Fest 2024 (Agate Academy)", 
