@@ -123,13 +123,13 @@ const Projects = () => {
     return (
         <Section id="projects">
             <SectionTitle title="Projects" subtitle="An exhibition of my passion and expertise." />
-            <div>
-                <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3"><Gamepad2 className="text-indigo-400" /> Game Developer</h3>
-                {projects.game.map((p, i) => <ProjectCardFeatured key={i} project={p} />)}
-            </div>
             <div className="mt-16">
                 <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3"><Code className="text-indigo-400" /> Fullstack Developer</h3>
                 {projects.fullstack.map((p, i) => <ProjectCardFeatured key={i} project={p} />)}
+            </div>
+            <div>
+                <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3"><Gamepad2 className="text-indigo-400" /> Game Developer</h3>
+                {projects.game.map((p, i) => <ProjectCardFeatured key={i} project={p} />)}
             </div>
             <div className="mt-16">
                 <div className="flex justify-between items-center mb-8">
