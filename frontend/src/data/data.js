@@ -4,7 +4,7 @@ import { Gamepad2, Code, BrainCircuit, Award, Star } from 'lucide-react';
 export const personalInfo = {
     name: "Rifki Setiawan",
     roles: ["Fullstack Developer", "Game Developer"],
-    bio: "Digital Multimedia Engineering student who specializes in fullstack website development and game development (Unity/C#). Experienced in project development cycle from idea to deployment, proven by successfully deploying 2 websites and becoming Top 10 Finalist in TSA Gamefest 2024 competition. Skilled in designing backend architecture, implementing gameplay mechanics, and collaborating within technical teams to efficiently achieve project goals.",
+    bio: "Digital Multimedia Engineering student who specializes in full-stack website development and game development. Experienced in the project development cycle from idea to deployment, proven by the success of deploying 3 websites and becoming the Top 10 of TSA Game Fest 2024 competition. Skilled in designing backend architecture, managing relational and NoSQL databases, and applying modern development principles to create scalable and efficient applications..",
     email: "rifki.setiawan0101@gmail.com",
     cvLink: "https://drive.google.com/drive/folders/1nfHXCFGkdqJYGJe5yiUhc_whtMdLuIsx?usp=sharing",
     socials: {
