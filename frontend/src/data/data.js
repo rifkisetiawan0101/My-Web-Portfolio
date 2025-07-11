@@ -53,7 +53,7 @@ export const skills = [
 export const projects = {
     fullstack: [
         {
-            "title": "LadaHitam Creation Website & CMS (Under Development)",
+            "title": "LadaHitam Creation Website & CMS",
             "tags": ["Next.js", "Full-Stack", "PostgreSQL", "Prisma", "Supabase", "TypeScript", "Tailwind CSS"],
             "overview": "A dynamic website for the 'LadaHitam Creation' indie game studio, serving as both a public portfolio and an internal Content Management System (CMS). The public-facing site showcases the studio's projects, members, and achievements with interactive, gamified elements. The integrated admin page allows for full CRUD (Create, Read, Update, Delete) management of all site content.",
             "contributions": [
