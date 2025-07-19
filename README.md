@@ -4,7 +4,7 @@
 
 ## ✨ Demo
 
-You can view the live portfolio here: [**Portfolio**](https://my-web-portfolio-rifkisetiawan0101s-projects.vercel.app/) 
+You can view the live portfolio here: [**Portfolio**](https://rstiawann.vercel.app/) or copy the link: https://rstiawann.vercel.app/
 
 ## 📖 Overview
 
