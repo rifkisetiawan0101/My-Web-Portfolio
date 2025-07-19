@@ -7,8 +7,8 @@ import Educations from './components/Educations';
 import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ParticleBackground from './components/ParticleBackground';
-import MouseTrail from './components/MouseTrail';
+import ParticleBackground from './lib/ParticleBackground';
+import MouseTrail from './lib/MouseTrail';
 
 function App() {
     useEffect(() => {

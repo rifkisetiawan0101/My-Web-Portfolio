@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Copy, Linkedin, Github, Instagram, ArrowRight, Gamepad2, ArrowDown, ArrowDown01, ArrowDownCircle } from 'lucide-react';
 import { personalInfo } from '../data/data';
+import TypingText from '../lib/TypingText'
 
 const Home = () => {
     const [isCopied, setIsCopied] = useState(false);
@@ -26,20 +27,26 @@ const Home = () => {
                         <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
                             Greetings! I'm <br /> <span className="text-indigo-400">{personalInfo.name}</span>
                         </h1>
-                        <p className="mt-4 text-lg text-slate-300 font-medium">{personalInfo.roles.join(' | ')}</p>
-                        <p className="mt-6 text-slate-400">{personalInfo.bio}</p>
+                        <div className="mt-4 text-lg md:text-xl text-slate-200 font-medium h-10 flex justify-center md:justify-start items-center gap-">
+                            <TypingText 
+                                text={personalInfo.roles} 
+                                className="text-lg md:text-xl text-indigo-400 font-medium"
+                            />
+                            <span>Developer</span>
+                        </div>
+                        <p className="mt-6 text-slate-300">{personalInfo.bio}</p>
                         <div className="mt-8 flex justify-center md:justify-start items-center gap-4">
-                            <span className="text-slate-300">{personalInfo.email}</span>
-                            <button onClick={copyEmail} className="relative text-slate-400 hover:text-white transition-colors">
+                            <span className="text-slate-200">{personalInfo.email}</span>
+                            <button onClick={copyEmail} className="relative text-slate-300 hover:text-white transition-colors">
                                 <Copy size={18} />
                                 {isCopied && (<span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-700 text-white text-xs px-2 py-1 rounded">Copied!</span>)}
                             </button>
                         </div>
                         <div className="mt-4 flex justify-center md:justify-start items-center gap-6">
-                            <a href={personalInfo.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors"><Linkedin size={24} /></a>
-                            <a href={personalInfo.socials.github} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors"><Github size={24} /></a>
-                            <a href={personalInfo.socials.itch} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors"><Gamepad2 size={24} /></a>
-                            <a href={personalInfo.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors"><Instagram size={24} /></a>
+                            <a href={personalInfo.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-indigo-400 transition-colors"><Linkedin size={24} /></a>
+                            <a href={personalInfo.socials.github} target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-indigo-400 transition-colors"><Github size={24} /></a>
+                            <a href={personalInfo.socials.itch} target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-indigo-400 transition-colors"><Gamepad2 size={24} /></a>
+                            <a href={personalInfo.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-indigo-400 transition-colors"><Instagram size={24} /></a>
                         </div>
                         <div className="mt-10 flex justify-center md:justify-start gap-4">
                             <a href="#projects" className="group bg-indigo-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-indigo-500 transition-all transform hover:scale-105 inline-flex items-center gap-2">
