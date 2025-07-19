@@ -1,4 +1,5 @@
 import React from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
 import Skills from './components/Skills';
@@ -11,6 +12,10 @@ import ParticleBackground from './components/ParticleBackground';
 import MouseTrail from './components/MouseTrail';
 
 function App() {
+    useEffect(() => {
+        document.title = "Rifki Setiawan - Full-Stack Developer & Game Developer Portfolio";
+    }, []);
+
     return (
         <div className="text-slate-300">
             <ParticleBackground />
