@@ -43,7 +43,7 @@ const Achievements = () => {
 
     useEffect(() => {
         const getItemsPerPage = () => {
-            if (window.innerWidth < 768) return 1;
+            if (window.innerWidth < 768) return 1; // mobile
             if (window.innerWidth < 1024) return 2;
             return 3;
         };

@@ -4,20 +4,35 @@ import { loadSlim } from "@tsparticles/slim";
 
 const ParticleBackground = () => {
     const [init, setInit] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
     useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768); // Breakpoint mobile
+        };
+
+        window.addEventListener('resize', handleResize);        
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    useEffect(() => {
+        if (isMobile) {
+            setInit(false);
+            return;
+        }
+
         initParticlesEngine(async (engine) => {
             await loadSlim(engine);
         }).then(() => {
             setInit(true);
         });
-    }, []);
+    }, [isMobile]); // Jalankan ulangjika status isMobile berubah
 
     const particleOptions = useMemo(
         () => ({
             background: {
                 color: {
-                    value: '#0f172a', // Warna slate-900 yang lebih gelap
+                    value: '#0f172a',
                 },
             },
             fpsLimit: 30,
@@ -67,7 +82,7 @@ const ParticleBackground = () => {
                         enable: true,
                         area: 800,
                     },
-                    value: 80, // Jumlah partikel
+                    value: 80,
                 },
                 opacity: {
                     value: 0.5,
@@ -87,7 +102,7 @@ const ParticleBackground = () => {
                 },
                 shadow: {
                     enable: true,
-                    color: "#6366f1", // Warna glow
+                    color: "#6366f1",
                     blur: 10,
                 },
                 twinkle: {
@@ -103,7 +118,25 @@ const ParticleBackground = () => {
         [],
     );
 
-    if (init) {
+    // Render mobile
+    if (isMobile) {
+        return (
+            <div
+                style={{
+                    position: 'fixed',
+                    width: '100%',
+                    height: '100%',
+                    top: 0,
+                    left: 0,
+                    backgroundColor: '#0f172a', // Warna slate-900
+                    zIndex: -10,
+                }}
+            />
+        );
+    }
+
+    // Render desktop
+    if (init && !isMobile) {
         return (
             <Particles
                 id="tsparticles"
@@ -114,13 +147,14 @@ const ParticleBackground = () => {
                     height: '100%',
                     top: 0,
                     left: 0,
-                    zIndex: 0,
+                    zIndex: -10,
                 }}
             />
         );
     }
 
-    return <></>;
+    // Jika di mobile atau belum init, render null
+    return null; 
 };
 
 export default ParticleBackground;
