@@ -54,22 +54,23 @@
         }
         to {
             opacity: 0;
-            transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0) 
+            translate(
+                calc((var(--random-x, 0.5) - 0.5) * 200px), 
+                calc((var(--random-y, 0.5) - 0.5) * 200px)
+            );
         }
     }
 }
 
-.mouse-trail-dot {
+.sparkle {
     position: fixed;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
     pointer-events: none;
+    background-color: #818cf8; /* Warna kuning amber */
+    border-radius: 50%;
     z-index: 9999;
-    
-    width: 16px;
-    height: 16px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.5) 0%, rgba(99, 102, 241, 0) 70%); /* indigo-500 glow */
-    
-    animation: fade-out-trail 0.5s forwards;
+
+    box-shadow: 0 0 8px #a5b4fc, 0 0 12px #818cf8, 0 0 16px #818cf8;
+
+    animation: fade-out-trail 1s forwards;
 }

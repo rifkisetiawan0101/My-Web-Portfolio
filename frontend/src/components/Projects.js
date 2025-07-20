@@ -1,22 +1,20 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import Section from './Section';
 import SectionTitle from './SectionTitle';
 import { projects } from '../data/data';
-import { Github, ArrowRight, ChevronUp, ChevronDown, Gamepad2, Code, BrainCircuit, ExternalLink } from 'lucide-react';
+import { Github, Youtube, Gamepad2, Code, BrainCircuit, ExternalLink, X, BookText, ChevronDown, ChevronUp } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const ProjectMedia = ({ image, videoUrl, isHovering }) => {
     const videoRef = useRef(null);
-
     const getYouTubeId = (url) => {
         if (!url) return null;
         const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
         const match = url.match(regExp);
         return (match && match[2].length === 11) ? match[2] : null;
     };
-
     const videoId = getYouTubeId(videoUrl);
 
-    // useEffect untuk mengubah src video saat isHovering berubah
     useEffect(() => {
         if (videoId && videoRef.current) {
             if (isHovering) {
@@ -48,120 +46,155 @@ const ProjectMedia = ({ image, videoUrl, isHovering }) => {
     );
 };
 
+const ContributionModal = ({ project, onClose }) => {
+    if (!project) return null;
+
+    return (
+        <AnimatePresence>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+                onClick={onClose}
+            >
+                <motion.div
+                    initial={{ scale: 0.9, y: 20 }}
+                    animate={{ scale: 1, y: 0 }}
+                    exit={{ scale: 0.9, y: 20 }}
+                    className="bg-slate-800 rounded-lg shadow-xl w-full max-w-2xl max-h-[80vh] overflow-y-auto p-8 relative"
+                    onClick={(e) => e.stopPropagation()}
+                >
+                    <button onClick={onClose} className="absolute top-4 right-4 text-slate-400 hover:text-white">
+                        <X size={24} />
+                    </button>
+                    <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
+                    <h4 className="font-semibold text-indigo-400 mt-6 mb-3">My Contributions:</h4>
+                    <ul className="list-disc list-inside text-slate-300 space-y-2">
+                        {project.contributions && project.contributions.map((item, index) => <li key={index}>{item}</li>)}
+                    </ul>
+                </motion.div>
+            </motion.div>
+        </AnimatePresence>
+    );
+};
+
+const ProjectCard = ({ project, onOpenModal }) => {
+    const [isHovering, setIsHovering] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const overviewText = String(project.overview || ''); 
+    const shortOverview = overviewText.substring(0, 100) + (overviewText.length > 100 ? '...' : '');
+
+    return (
+        <motion.div
+            layout
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ type: 'spring', stiffness: 200, damping: 25 }}
+        >
+        <div 
+            className="bg-slate-800/70 rounded-lg overflow-hidden flex flex-col h-full transition-all duration-300 transform hover:scale-[1.025] hover:shadow-2xl hover:shadow-indigo-500/20"
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+        >
+            <div className="w-full aspect-video">
+                <ProjectMedia 
+                    image={project.image} 
+                    videoUrl={project.links?.trailer} 
+                    isHovering={isHovering}
+                />
+            </div>
+            <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map(tag => <span key={tag} className="bg-indigo-600/20 text-indigo-300 text-xs font-medium px-2 py-1 rounded-full">{tag}</span>)}
+                </div>
+                
+                {overviewText && (
+                    <div className="text-slate-400 text-sm mb-4 flex-grow">
+                        <p className={`transition-all duration-300 ${isExpanded ? 'max-h-96' : 'max-h-12 overflow-hidden'}`}>
+                            {isExpanded ? overviewText : shortOverview}
+                        </p>
+                        {overviewText.length > 100 && (
+                            <button onClick={() => setIsExpanded(!isExpanded)} className="text-indigo-400 hover:text-indigo-300 font-semibold mt-2 text-xs inline-flex items-center gap-1">
+                                {isExpanded ? 'See Less' : 'See More'}
+                                {isExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                            </button>
+                        )}
+                    </div>
+                )}
+
+                <div className="mt-auto pt-4 border-t border-slate-700/50 flex flex-col gap-3">
+                    {project.contributions?.length > 0 && (
+                        <button 
+                            onClick={() => onOpenModal(project)}
+                            className="w-full text-center bg-slate-700 text-slate-200 hover:bg-slate-600 font-semibold text-sm py-2 px-4 rounded-md transition-colors inline-flex items-center justify-center gap-2"
+                        >
+                            <BookText size={16} /> See Contributions
+                        </button>
+                    )}
+                    <div className="grid grid-cols-3 gap-2 text-sm">
+                        {project.links?.trailer && <a href={project.links.trailer} target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-indigo-400 bg-slate-700/50 hover:bg-slate-700 p-2 rounded-md flex items-center justify-center gap-1.5 transition-colors"><Youtube size={16}/> Trailer</a>}
+                        {project.links?.github && <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-indigo-400 bg-slate-700/50 hover:bg-slate-700 p-2 rounded-md flex items-center justify-center gap-1.5 transition-colors"><Github size={16}/> Docs</a>}
+                        {project.links?.live && <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-indigo-400 bg-slate-700/50 hover:bg-slate-700 p-2 rounded-md flex items-center justify-center gap-1.5 transition-colors"><ExternalLink size={16}/> Live</a>}
+                    </div>
+                </div>
+            </div>
+        </div>
+        </motion.div>
+    );
+};
+
 const Projects = () => {
-    const [showOther, setShowOther] = useState(false);
+    const [activeFilter, setActiveFilter] = useState('All');
+    const [activeModalProject, setActiveModalProject] = useState(null);
 
-    const ProjectCardFeatured = ({ project }) => {
-        const [isHovering, setIsHovering] = useState(false);
+    const filterGroups = [
+        { name: 'All', key: 'All' },
+        { name: 'Fullstack Development', key: 'fullstack' },
+        { name: 'Game Development', key: 'game' },
+        { name: 'Other Projects', key: 'other' },
+    ];
 
-        return (
-            <div 
-                className="mb-16 group" 
-                onMouseEnter={() => setIsHovering(true)}
-                onMouseLeave={() => setIsHovering(false)}
-            >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-slate-800/50 p-8 rounded-lg transition-transform duration-300 transform group-hover:scale-105">
-                    <div className="w-full aspect-video rounded-md shadow-lg overflow-hidden">
-                        <ProjectMedia 
-                            image={project.image} 
-                            videoUrl={project.links.trailer} 
-                            isHovering={isHovering}
-                        />
-                    </div>
-                    <div>
-                        <h3 className="text-2xl font-bold text-white">{project.title}</h3>
-                        <div className="flex flex-wrap gap-2 my-4">
-                            {project.tags.map(tag => <span key={tag} className="bg-indigo-600/20 text-indigo-300 text-xs font-medium px-2.5 py-1 rounded-full">{tag}</span>)}
-                        </div>
-                        <h4 className="font-semibold text-white mt-6 mb-2">Project Overview</h4>
-                        <p className="text-slate-400">{project.overview}</p>
-                        <h4 className="font-semibold text-white mt-6 mb-2">My Contributions</h4>
-                        <ul className="list-disc list-inside text-slate-400 space-y-1">
-                            {project.contributions.map(item => <li key={item}>{item}</li>)}
-                        </ul>
-                        <div className="mt-6 flex items-center gap-4 text-sm">
-                            {project.links.itch && <a href={project.links.itch} target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 font-medium">View on Itch.io</a>}
-                            {project.links.trailer && <a href={project.links.trailer} target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 font-medium">Watch Trailer</a>}
-                            {project.links.live && <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center gap-1">Play Demo <ExternalLink size={14} /></a>}
-                            {project.links.github && <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center gap-1">See Documentation <Github size={14} /></a>}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    };
-
-    const ProjectCardGrid = ({ project, index }) => { // Menerima 'index' untuk delay
-        const [isHovering, setIsHovering] = useState(false);
-
-        return (
-            <div 
-                className="bg-slate-800 rounded-lg overflow-hidden group transition-all duration-300 transform hover:scale-105"
-                onMouseEnter={() => setIsHovering(true)}
-                onMouseLeave={() => setIsHovering(false)}
-            >
-                <div className="w-full aspect-video">
-                    <ProjectMedia 
-                        image={project.image} 
-                        videoUrl={project.link} 
-                        isHovering={isHovering}
-                    />
-                </div>
-                <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                        {project.tags.map(tag => <span key={tag} className="bg-slate-700 text-slate-300 text-xs font-medium px-2 py-1 rounded">{tag}</span>)}
-                    </div>
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-indigo-400 font-medium inline-flex items-center gap-2 group-hover:text-indigo-300">
-                        See Details <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                    </a>
-                </div>
-            </div>
-        );
-    };
+    const filteredProjects = useMemo(() => {
+        if (activeFilter === 'All') {
+            return [...projects.fullstack, ...projects.game, ...projects.other];
+        }
+        return projects[activeFilter] || [];
+    }, [activeFilter]);
 
     return (
         <Section id="projects">
             <SectionTitle title="Projects" subtitle="An exhibition of my passion and expertise." />
-            <div className="mt-16">
-                <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3"><Code className="text-indigo-400" /> Fullstack Developer</h3>
-                {projects.fullstack.map((p, i) => <ProjectCardFeatured key={i} project={p} />)}
-            </div>
-            <div>
-                <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3"><Gamepad2 className="text-indigo-400" /> Game Developer</h3>
-                {projects.game.map((p, i) => <ProjectCardFeatured key={i} project={p} />)}
-            </div>
-            <div className="mt-16">
-                <div className="flex justify-between items-center mb-8">
-                    <h3 className="text-2xl font-bold text-white flex items-center gap-3"><BrainCircuit className="text-indigo-400" /> Other Projects</h3>
-                    <button 
-                        onClick={() => setShowOther(!showOther)} 
-                        className={`
-                            bg-indigo-600 text-white font-semibold px-4 py-2 rounded-md hover:bg-indigo-500 
-                            transition-all inline-flex items-center gap-2
-                            transform hover:scale-110
-                            ${showOther 
-                                ? 'animate-[bounce-subtle_2s_ease-in-out_infinite]' 
-                                : 'animate-[breathing-bezier_3s_infinite]'
-                            }
-                        `}
+            
+            <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
+                {filterGroups.map(group => (
+                    <button
+                        key={group.key}
+                        onClick={() => setActiveFilter(group.key)}
+                        className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${activeFilter === group.key ? 'bg-indigo-600 text-white shadow-lg' : 'bg-slate-700/50 text-slate-300 hover:bg-slate-700'}`}
                     >
-                        {showOther ? 'Hide Other Projects' : 'Show Other Projects'} 
-                        {showOther ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                        {group.name}
                     </button>
-                </div>
-
-                <div className={`
-                    grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 
-                    transition-all duration-700 ease-in-out
-                    ${showOther ? 'opacity-100 max-h-[1000px] mt-8' : 'opacity-0 max-h-0 overflow-hidden'}
-                `}>
-                    {projects.other.map((p, i) => (
-                        <ProjectCardGrid key={i} project={p} index={i} /> // Mengirim 'index'
-                    ))}
-                </div>
-
+                ))}
             </div>
+            
+            <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <AnimatePresence>
+                    {filteredProjects.map((p, i) => (
+                        <ProjectCard key={`${activeFilter}-${p.title}-${i}`} project={p} onOpenModal={setActiveModalProject} />
+                    ))}
+                </AnimatePresence>
+            </motion.div>
+
+            {activeModalProject && (
+                <ContributionModal 
+                    project={activeModalProject} 
+                    onClose={() => setActiveModalProject(null)} 
+                />
+            )}
         </Section>
     );
 };

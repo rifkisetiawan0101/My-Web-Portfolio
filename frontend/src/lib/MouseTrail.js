@@ -1,3 +1,5 @@
+// src/components/MouseTrail.js
+
 import React, { useState, useEffect } from 'react';
 
 const MouseTrail = () => {
@@ -9,11 +11,17 @@ const MouseTrail = () => {
                 id: Date.now(),
                 x: e.clientX,
                 y: e.clientY,
+                size: Math.random() * 5 + 1,
+                randomX: Math.random(),
+                randomY: Math.random(),
             };
-            setParticles(prevParticles => [...prevParticles, newParticle]);
+
+            setParticles(prev => [...prev, newParticle]);
+
+            // Hapus partikel dari state setelah animasi selesai (250ms)
             setTimeout(() => {
                 setParticles(prev => prev.filter(p => p.id !== newParticle.id));
-            }, 500);
+            }, 1000);
         };
 
         window.addEventListener('mousemove', handleMouseMove);
@@ -25,13 +33,15 @@ const MouseTrail = () => {
 
     return (
         <>
-            {particles.map((particle) => (
+            {particles.map(p => (
                 <div
-                    key={particle.id}
-                    className="mouse-trail-dot"
+                    key={p.id}
+                    className="sparkle"
                     style={{
-                        left: `${particle.x}px`,
-                        top: `${particle.y}px`,
+                        left: `${p.x}px`,
+                        top: `${p.y}px`,
+                        width: `${p.size}px`,
+                        height: `${p.size}px`,
                     }}
                 />
             ))}
