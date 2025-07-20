@@ -13,7 +13,7 @@ export const personalInfo = {
         itch: "https://itch.io/profile/rstiawann",
         instagram: "https://instagram.com/rstiawann_",
     },
-    profilePicture: "/Image/Profile/profile-picture-stylized.png"
+    profilePicture: "/Image/Profile/profile-picture-black.png"
 };
 
 export const skills = [
