@@ -1,3 +1,9 @@
+> **⚠️ Project Archived: This Portfolio Has Been Upgraded!**
+>
+> This repository contains the deprecated version of my portfolio, built with Create React App. For better performance, improved SEO, and a more modern architecture, this project has been completely migrated to **Next.js**.
+>
+> **➡️ [View the new Next.js version here: rstiawann-portfolio](https://github.com/rifkisetiawan0101/rstiawann-portfolio)**
+
 # 🚀 Rifki Setiawan - Personal Portfolio Website 🚀
 
 <img src="https://komarev.com/ghpvc/?username=rifkisetiawan0101-portfolio&label=Project%20Views&color=6366f1&style=flat" alt="Project Views"/>
@@ -52,27 +58,21 @@ This project leverages a modern, robust, and scalable technology stack.
 ## 📸 Screenshots
 
 **Home Section**
-
 ![Home](screenshots/home.png)
 
 **Skills Section**
-
 ![Skills](screenshots/skills.png)
 
 **Projects Section**
-
 ![Projects](screenshots/projects.png)
 
 **Education Section**
-
 ![Education](screenshots/education.png)
 
 **Achievements Section**
-
 ![Achievements](screenshots/achievements.png)
 
 **Contact Section**
-
 ![Contact](screenshots/contact.png)
 
 ## 📄 License
